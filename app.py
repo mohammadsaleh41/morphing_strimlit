@@ -82,7 +82,7 @@ if img_file_1 and img_file_2:
 
     # لیست تصاویر n_t مرحله که از تصویر اول به تصویر دوم کم کم تبدیل می‌شوند
     l_image_1_to_2 = []
-    n_t = 20
+    n_t = 30
     range_t = range(1 , n_t+1)
     for t_i in range_t:
         t = t_i / n_t
@@ -128,6 +128,6 @@ if img_file_1 and img_file_2:
 
     # ذخیره به عنوان GIF
     gif_name = 'output.gif'
-    images[0].save(gif_name, save_all=True, append_images=images[1:], duration=100, loop=0)
+    images[0].save(gif_name, save_all=True, append_images=images[1:], duration=50, loop=0)
 
     st.image(gif_name, caption="GIF نهایی")
